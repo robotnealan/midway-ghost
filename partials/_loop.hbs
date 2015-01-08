@@ -1,0 +1,21 @@
+<div class="block">
+    {{! Each post will be output using this markup }}
+    {{#foreach posts}}
+
+    <article class="post {{post_class}}">
+        <header>
+            <div class="post-meta">
+                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+            </div>
+            <h2 class="post-title">
+                <a href="{{url}}">{{{title}}}</a>
+            </h2>
+        </header>
+    </article>
+
+    {{/foreach}}
+
+        {{!! After all the posts, we have the previous/next pagination links }}
+    {{ pagination}}
+
+</div>

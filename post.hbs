@@ -1,0 +1,49 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main class="page-wrapper" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+                {{! Everything inside the #post tags pulls data from the post }}
+                {{#post}}
+
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-meta">
+                                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+                            </div>
+                            <h1 class="post-title">{{{title}}}</h1>
+                        </header>
+
+                        <section class="post-content">
+                            
+                            {{content}}
+
+                            <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1403226798.html#_=1404352611790&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=robertnealan&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true"></iframe>
+                        </section>
+
+                        <footer class="post-footer">
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 post-author">
+                                    <h5>Written by</h5>
+                                    <a href="#">Robert Nealan</a>
+                                </div>
+                                <div class="col-md-9 col-xs-6 post-tags">
+                                    <h5>Tags</h5>
+                                    <a href="#">Design</a>, <a href="#">Typography</a>, <a href="#">Designing in the Browser</a>
+                                </div>
+                            </div>
+                        </footer>
+                    </article>
+
+                {{/post}}
+            </div>
+        </div>
+        {{> "_owner"}}
+    </article>
+
+</main>

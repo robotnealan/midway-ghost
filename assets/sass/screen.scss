@@ -1,0 +1,443 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+
+@import "bootstrap";
+@import "fontello";
+
+$primary-color: #1a90ff;
+
+$body-font-color: #333;
+$body-font-family: "ff-spinoza-web-pro", Georgia, serif;
+$body-font-size: 2rem;
+$body-line-height: 1.6em;
+
+$link-color: $primary-color;
+$link-color-hover: darken($link-color, 10%);
+
+$title-font-color: #444;
+$title-font-family:	"abril-display", Georgia, serif;
+
+$default-border-color: #ddd;
+
+html {
+	font-family: $body-font-family;
+}
+
+a {
+	@include background(linear-gradient(bottom, rgba(26,144,255,0) 50%, rgba(26,144,255,0) 50%));
+	background-repeat: repeat-x;
+	background-size: 2px 2px;
+	background-position: 0 0.95em;
+	color: $link-color;
+	text-decoration: none;
+	@include transition(color .2s);
+	&:hover {
+		@include background(linear-gradient(bottom, rgba(26,144,255,0) 50%, rgba(26,144,255,1) 50%));
+		background-repeat: repeat-x;
+		background-size: 2px 2px;
+		background-position: 0 0.95em;
+		color: $link-color-hover;
+		text-decoration: none;
+	}
+}
+
+.menu-open {
+	.page-wrapper {
+		@include transform(translateX(-260px));
+	}
+	.post, .owner, .page-footer {
+		opacity: .25;
+	}
+	.page-cover {
+		height: 100%;
+	}
+}
+
+.menu-trigger {
+	color: $title-font-color;
+	display: block;
+	line-height: 40px;
+	font-family: $title-font-family;
+	height: 40px;
+	padding: 0 0 0 10px;
+	position: relative;
+	text-decoration: none;
+	z-index: 22;
+	@include transition(color .1s);
+	&:hover {
+		@include background(none);
+		color: #1a90ff;
+		text-decoration: none;
+	}
+}
+
+.page-wrapper {
+	@include transition(transform .25s ease-in-out);
+	@include transform(translate3d(0,0,0));
+	background: #fff;
+	overflow: hidden;
+	position: relative;
+	z-index: 20;
+}
+
+.page-wrapper-header {
+	z-index: 22;
+}
+
+.page-cover {
+	background: transparent;
+	height:0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index:21;
+}
+
+.page-nav {
+	background: #333;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 260px;
+	z-index: 1;
+	color: #fafafa;
+	line-height: 2.5em;
+	font-family: $title-font-family;
+	h3 {
+		font-weight: 100;
+		font-size: 1rem;
+	}
+	ul {
+		margin: 2em 0;
+	}
+	li {
+		padding: 0 20px;
+	}
+	a {
+		font-weight: 100;
+		color: #fafafa;
+		display: block;
+		font-size: $body-font-size;
+		@include transition(color .15s);
+		&:hover {
+			@include background(none);
+			color: #1a90ff;
+			text-decoration: none;
+		}
+	}
+}
+
+.logo img {
+}
+
+.page-header {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	position: relative;
+	z-index: 22;
+}
+
+.post {
+	margin-bottom: 4rem;
+	opacity: 1;
+	@include transition(opacity .25s ease-in-out);
+}
+.post-meta {
+	color: #aaa;
+	font-style: italic;
+	margin-bottom: .5em;
+}
+
+.post-title {
+	color: $title-font-color;
+	font-family: $title-font-family;
+	font-size: 6rem;
+	margin-bottom: .1em;
+	line-height:1em;
+	a {
+		color: $title-font-color;
+		&:hover {
+			@include background(none);
+			color: $link-color-hover;
+			text-decoration: none;
+			@include transition(color .1s linear);
+		}
+	}
+}
+
+.post-subtitle {
+	color: $title-font-color;
+	font-size: 2rem;
+	margin-bottom: .3em;
+	line-height:1.4em;
+	font-weight: 400
+}
+
+.post-header {
+	margin-bottom: 4rem;
+}
+
+.post-content {
+	color: $body-font-color;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+
+	a {
+		color: $body-font-color;
+		@include background(linear-gradient(bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 50%));
+		background-repeat: repeat-x;
+		background-size: 2px 2px;
+		background-position: 0 0.95em;
+		@include transition(background .1s, color .1s);
+		&:hover {
+			@include background(linear-gradient(bottom, rgba(26,144,255,0) 50%, rgba(26,144,255,1) 50%));
+			background-repeat: repeat-x;
+			background-size: 2px 2px;
+			background-position: 0 0.95em;
+			color: $link-color-hover;
+		}
+	}
+
+	img {
+		margin: 1em 0 2em 0;
+		max-width: 100%;
+	}
+
+	hr {
+		margin: 2em 0;
+	}
+	
+	em {
+		color: #666;
+		font-style: italic;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 700;
+	}
+	
+	h1 {
+		font-size: 3.5em;
+	}
+	
+	h2 {
+		font-size: 2em;
+		margin: 4rem 0 1rem 0;
+	}
+	
+	h3, h4 {
+		color: #333;
+		font-size: 1.125em;
+	}
+
+
+	h3, h4, h5, h6 {
+			margin: 1.5em 0 0 0;
+	}
+
+	p, blockquote {
+		margin: 1em 0;
+	}
+	
+	ul {
+		list-style-type: disc;
+		margin: 1em 0 1.5em 0;
+		padding-left: 1.25em;
+	}	
+
+	blockquote {
+		font-style: italic;
+		margin-top: 1em;
+		padding-left: 15px;
+		border-left: 5px solid $default-border-color;
+	}
+}
+
+.post-footer {
+	margin-bottom: 4rem;
+	padding: 0 15px;
+	position: relative;
+	h5 {
+		font-weight: 700;
+	}
+	a {
+		color: $link-color;
+		@include background(linear-gradient(bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 50%));
+		background-repeat: repeat-x;
+		background-size: 2px 2px;
+		background-position: 0 0.95em;
+		@include transition(background .1s, color .1s);
+		&:hover {
+			@include background(linear-gradient(bottom, rgba(26,144,255,0) 50%, rgba(26,144,255,1) 50%));
+			background-repeat: repeat-x;
+			background-size: 2px 2px;
+			background-position: 0 0.95em;
+			color: $link-color-hover;
+		}
+	}
+	@media(min-width: 768px) {
+		border-bottom: 1px solid $default-border-color;
+		padding: 0;
+	}
+}
+
+.post-footer-bottom {
+	p {
+		margin-bottom: 0.5em;
+	}
+}
+
+.hearts {
+	color: #f00;
+}
+.post-tags, .post-author {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.post-tags, .post-author {
+	border-bottom: 1px solid $default-border-color;
+	@media(min-width: 768px) {
+		border-bottom: none;
+		margin: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.post-tags {
+	border-left: 1px solid $default-border-color;
+}
+
+.button-primary {
+	background: $link-color;
+	border: none;
+	color: #fff;
+	line-height: 1em;
+	padding: .5em .5em;
+	font-family: abril-display;
+	@include transition(background .2s linear);
+	
+	&:hover {
+		background: $link-color-hover
+	}
+}
+
+.button-neutral {
+	background: #fff;
+	border: 1px solid #aaa;
+	color: #aaa;
+	display: inline-block;
+	font-family: $body-font-family;
+	line-height: 1em;
+	padding: 10px 15px 9px 15px;
+	@include transition(color .2s, border .2s);
+	i {
+		margin-left: -6px;
+	}
+	&:hover {
+		@include background(none);
+		border: 1px solid $link-color-hover;
+		color: $link-color-hover;
+		text-decoration: none;
+	}
+}
+
+.block {
+	border-bottom: 1px solid $default-border-color;
+	margin-bottom: 4rem;
+	padding-bottom: 4rem;
+}
+
+.owner {
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+}
+
+.owner-photo {
+	text-align: center;
+	img {
+		border-radius: 50%;
+		max-width: 100%;
+	}
+	@media (max-width: 768px) {
+		margin-bottom: 4rem;
+		img {
+			max-width: 100px;
+		}
+	}
+}
+
+.page-footer {
+	padding-bottom: 4rem;
+	@media (min-width: 768px) {
+		padding-bottom: 6rem;
+	}
+}
+
+#mc_embed_signup {
+	text-align: center;
+	p {
+		font-size: $body-font-size;
+	}
+	.email {
+		border: 1px solid $default-border-color;
+		margin-top: 1rem;
+		padding: 8px 12px;
+		width: 70%;
+	}
+	input[type="submit"] {
+		background: $link-color;
+		border: none;
+		color: #fff;
+		height: 38px;
+		line-height: 37px;
+		padding: 0 20px;
+		font-family: abril-display;
+		font-size: 1.2em;
+		margin-left: 10px;
+		@include transition(background .2s linear);
+		&:hover {
+			background: $link-color-hover
+		}
+	}
+}
+
+#twitter-widget-0 {
+	width: 247px;
+	height: 22px;
+	margin-top: .5em;
+	margin-bottom: 4rem;
+}
+
+.form-expand {
+	input {
+		width: 100%;
+	}
+}
+.form-group {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.label {
+	display: block;
+	font-size: .8em;
+	line-height: 1em;
+	margin-bottom: .2em;
+}
+
+input[type="text"] {
+	border: 1px solid #ccc;
+	padding: .15em .5em;
+}
+
+.t-center {
+	text-align: center;
+}

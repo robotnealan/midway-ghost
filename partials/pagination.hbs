@@ -1,0 +1,9 @@
+<nav class="pagination clearfix" role="pagination">
+    {{#if prev}}
+    	<a href="{{pageUrl prev}}" class="button-neutral pull-left"><i class="icon-left-open"></i> Newer Posts</a>
+    {{/if}}
+    <!--<span class="page-number">Page {{page}} of {{pages}}</span>-->
+    {{#if next}}
+        <a href="{{pageUrl next}}" class="button-neutral pull-right">Older Posts <i class="icon-right-open"></i></a>
+    {{/if}}
+</nav>
