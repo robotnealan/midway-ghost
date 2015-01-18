@@ -1,0 +1,19 @@
+.owner {
+	font-size: $body-font-size;
+	font-weight: $body-font-weight;
+	line-height: $body-line-height;
+}
+
+.owner-photo {
+	text-align: center;
+	img {
+		border-radius: 50%;
+		max-width: 100%;
+	}
+	@media (max-width: 768px) {
+		margin-bottom: 4rem;
+		img {
+			max-width: 100px;
+		}
+	}
+}

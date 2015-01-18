@@ -1,0 +1,28 @@
+a {
+	@include background(linear-gradient(bottom, rgba(26,144,255,0) 50%, rgba(26,144,255,0) 50%));
+	background-repeat: repeat-x;
+	background-size: 2px 2px;
+	background-position: 0 1.2em;
+	color: $link-color;
+	text-decoration: none;
+	@include transition(color .2s);
+	&:hover {
+		@include background(linear-gradient(bottom, rgba(26,144,255,0) 50%, rgba(26,144,255,1) 50%));
+		background-repeat: repeat-x;
+		background-size: 2px 2px;
+		background-position: 0 1.2em;
+		color: $link-color-hover;
+		text-decoration: none;
+	}
+}
+
+.content--text {
+	font-weight: $body-font-weight;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+}
+
+.content--text--small {
+	@extend .content--text;
+	font-size: ($body-font-size * .9);
+}

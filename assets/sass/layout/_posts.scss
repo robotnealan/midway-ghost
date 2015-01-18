@@ -1,0 +1,210 @@
+.post {
+	margin-bottom: 8rem;
+	opacity: 1;
+	@include transition(opacity .25s ease-in-out);
+}
+
+.post-meta {
+	color: #aaa;
+	font-style: italic;
+	margin-bottom: .5em;
+}
+
+.post-title {
+	color: $title-font-color;
+	font-family: $title-font-family;
+	font-size: 4rem;
+	margin-bottom: .25em;
+	line-height:1em;
+	a {
+		color: $title-font-color;
+		&:hover {
+			@include background(none);
+			color: $link-color-hover;
+			text-decoration: none;
+			@include transition(color .1s linear);
+		}
+	}
+}
+
+.post-subtitle {
+	color: $title-font-color;
+	font-size: 2rem;
+	margin-bottom: .3em;
+	line-height:1.4em;
+	font-weight: 400
+}
+
+.post-header {
+}
+
+.post-excerpt {
+	color: $body-font-color;
+	font-weight: $body-font-weight;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+}
+
+.post-content, .post-preview {
+	h1, h2 {
+		@extend .col-md-12;
+	}
+
+	p, ul, ol, blockquote, h3, h4, h5, h6, hr, pre {
+		@extend .col-md-7;
+	}
+
+
+}
+
+.post-content {
+	a {
+		color: $primary-color;
+		@include background(linear-gradient(bottom, rgba(26, 144, 255, 0) 50%, rgba(26, 144, 255, 1) 50%));
+		background-repeat: repeat-x;
+		background-size: 2px 2px;
+		background-position: 0 1.1em;
+		@include transition(background .25s, color .25s);
+		&:hover {
+			@include background(linear-gradient(bottom, rgba(23, 130, 229, 0) 50%, rgba(23, 130, 229, 1) 50%));
+			background-repeat: repeat-x;
+			background-size: 2px 2px;
+			background-position: 0 1.1em;
+			color: $link-color-hover;
+		}
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	hr {
+		margin: 1.5em 20px;
+	}
+	
+	em {
+		color: #666;
+		font-style: italic;
+	}
+
+	
+	h1 {
+		font-size: 3.5em;
+	}
+
+	h2 {
+		line-height: 1.1em;
+	}
+
+	h3, h4, h5, h6 {
+		font-weight: 700;
+	}
+	
+	
+	h2 {
+		font-size: 2em;
+		margin: 4rem 0 1rem 0;
+	}
+	
+	h3, h4 {
+		color: #333;
+		font-size: 1.125em;
+	}
+
+
+	h3, h4, h5, h6 {
+			margin: 1.5em 0 0 0;
+	}
+
+	p, blockquote {
+		margin: 1em 0;
+	}
+	
+	ul {
+		list-style-type: disc;
+		margin: 1em 0 1.5em 0;
+		padding-left: 1.75em;
+		ul {
+			float: none;
+			margin: 0;
+			width: auto;
+		}
+	}	
+
+	h4 + ul {
+		margin-top: .25em;
+	}
+
+	ul + h4 {
+		margin-top: 0;
+	}
+	
+	blockquote {
+		font-style: italic;
+		margin-top: 1em;
+		padding-left: 15px;
+
+		p {
+		
+			float: none;
+			margin: 0 0 0 15px;
+			width: auto;
+		
+		}
+		&::before {
+			@include background(linear-gradient(left, lighten($primary-color, 15%) 0%, $primary-color 100%));
+			content: '';
+			display: block;
+			height: 100%;
+			left: 15px;
+			position: absolute;
+			width: 3px;
+		}
+	}
+
+	
+
+	p.image {
+		@extend .col-md-12;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.post-footer {
+	margin-bottom: 4rem;
+	position: relative;
+	h5 {
+		font-weight: 700;
+	}
+	a {
+		color: $link-color;
+		@include background(linear-gradient(bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 50%));
+		background-repeat: repeat-x;
+		background-size: 2px 2px;
+		background-position: 0 1.2em;
+		@include transition(background .1s, color .1s);
+		&:hover {
+			@include background(linear-gradient(bottom, rgba(26,144,255,0) 50%, rgba(26,144,255,1) 50%));
+			background-repeat: repeat-x;
+			background-size: 2px 2px;
+			background-position: 0 1.2em;
+			color: $link-color-hover;
+		}
+	}
+	
+}
+
+.post-full {
+	p, ul, ol, blockquote, h1, h2, h3, h4, h5, h6, hr, pre {
+		@extend .col-md-12;
+	}
+}
+
+.post-footer-bottom {
+	p {
+		margin-bottom: 0.5em;
+	}
+}

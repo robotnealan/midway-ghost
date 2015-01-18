@@ -26,14 +26,17 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-    
-    {{> header}}
-    {{> nav}}
-    {{! Everything else gets inserted here }}
-    {{{body}}}
 
+    <div class="container">
+        <!--{{> header}}-->
+
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+
+        {{> "_sidebar"}}
+    </div>
     {{> footer}}
-
+    
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 

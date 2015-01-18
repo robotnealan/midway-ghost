@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+	$('.post-content img').parent('p').addClass('image');
+	
 	$('.menu-trigger').on('click', function(e) {
 		e.preventDefault();
 		$('body').toggleClass('menu-open');

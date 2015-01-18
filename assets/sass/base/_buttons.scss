@@ -1,0 +1,39 @@
+.button {
+	@include transition(background .2s linear);
+	font-weight: $body-font-weight;
+	line-height: 1em;
+	padding: .5em .75em;
+}
+
+.button-primary {
+	background: $link-color;
+	border: none;
+	color: #fff;
+	&:hover {
+		background: $link-color-hover
+	}
+}
+
+.button-neutral {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	color: #ccc;
+	line-height: 1em;
+	&:hover {
+		@include background(none);
+		border: 1px solid $link-color-hover;
+		color: $link-color-hover;
+		text-decoration: none;
+	}
+}
+
+.pagination .button:nth-child(2) {
+	margin-left: 10px;
+}
+.pagination .button .icon-right-open {
+		margin-left: 2px;
+}
+.pagination .button .icon-left-open {
+	margin-right: 2px;
+}

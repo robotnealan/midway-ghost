@@ -1,0 +1,15 @@
+$primary-color: #1a90ff; // 26, 144, 255
+
+$body-font-color: #333;
+$body-font-family: "freight-text-pro", Georgia, serif;
+$body-font-size: 1.7rem;
+$body-line-height: 1.75em;
+$body-font-weight: 300;
+
+$link-color: $primary-color;
+$link-color-hover: darken($link-color, 10%); // 23, 130, 229
+
+$title-font-color: #444;
+$title-font-family:	"abril-display", Georgia, serif;
+
+$default-border-color: #ddd;

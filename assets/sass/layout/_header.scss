@@ -1,0 +1,60 @@
+.page-cover {
+	background: transparent;
+	height:0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index:21;
+}
+
+.page-nav {
+	font-size: 1.5rem;
+	font-weight: $body-font-weight;
+	letter-spacing: 0.08em;
+	ul {
+		@include horizontal-list(false);
+		
+		li {
+			padding: 0 0 0 1.2em;
+			
+			&:first-child {
+				padding-left: 0;
+			}
+			
+			&:last-child {
+				&::after {
+					color: #fff;
+				}
+			}
+
+			&::after {
+				content: '/';
+				color: #aaa;
+				font-size: 1.2rem;
+				padding-left: 1em;
+				position: relative;
+				top: -2px;
+			}
+
+			&.back {
+				border-right: 1px solid #ddd;
+				padding-right: 2em;
+				&::after {
+					content: '';
+					display: block;
+					padding-left: 2em;
+					position: relative;
+					top: -2px;
+				}
+			}
+		}
+	}
+}
+
+
+.page--header {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	position: relative;
+	z-index: 22;
+}

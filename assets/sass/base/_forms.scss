@@ -1,0 +1,26 @@
+.form-expand {
+	input {
+		width: 100%;
+	}
+}
+
+.form-group {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.label {
+	display: block;
+	font-size: .8em;
+	line-height: 1em;
+	margin-bottom: .2em;
+}
+
+input[type="text"] {
+	border: 1px solid #ccc;
+	padding: .15em .5em;
+}
+
+.t-center {
+	text-align: center;
+}

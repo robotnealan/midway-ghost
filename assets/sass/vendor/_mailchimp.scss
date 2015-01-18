@@ -1,0 +1,26 @@
+#mc_embed_signup {
+	p {
+		font-size: $body-font-size;
+	}
+	.email {
+		border: 1px solid $default-border-color;
+		margin-top: 1rem;
+		padding: 8px 12px;
+		width: 70%;
+	}
+	input[type="submit"] {
+		background: $link-color;
+		border: none;
+		color: #fff;
+		height: 38px;
+		line-height: 37px;
+		padding: 0 20px;
+		font-family: abril-display;
+		font-size: 1.2em;
+		margin-left: 10px;
+		@include transition(background .2s linear);
+		&:hover {
+			background: $link-color-hover
+		}
+	}
+}
