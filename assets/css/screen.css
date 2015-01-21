@@ -1954,26 +1954,28 @@ input[type="email"] {
   color: #333;
   font-weight: 700;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   /* line 1, ../sass/layout/_header.scss */
   .page--header {
     border-bottom: 1px solid #ddd;
     padding-bottom: 4rem;
     padding-top: 4rem;
   }
-  /* line 27, ../sass/layout/_header.scss */
+}
+@media screen and (max-width: 992px) {
+  /* line 29, ../sass/layout/_header.scss */
   .page--header::before {
     display: none;
   }
 }
 
-/* line 33, ../sass/layout/_header.scss */
+/* line 35, ../sass/layout/_header.scss */
 .page--header--content {
   position: relative;
   z-index: 2;
 }
 
-/* line 38, ../sass/layout/_header.scss */
+/* line 40, ../sass/layout/_header.scss */
 .page-nav {
   font-size: 1.5rem;
   font-weight: 400;

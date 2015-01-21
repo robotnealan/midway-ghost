@@ -20,10 +20,12 @@
 		color: #333;
 		font-weight: 700;
 	}
-	@media screen and (max-width: $screen-md) {
+	@media screen and (max-width: $screen-sm) {
 		border-bottom: 1px solid #ddd;
 		padding-bottom: 4rem;
 		padding-top: 4rem;
+	}
+	@media screen and (max-width: $screen-md) {
 		&::before {
 			display: none;
 		}
