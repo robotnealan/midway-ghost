@@ -1,3 +1,21 @@
+.page--wrapper {
+	background: #fff;
+	margin: 10px 10px 0 10px;
+	overflow: hidden;
+	position: relative;
+	&>.container {
+		position: relative;
+	}
+	@media screen and (max-width: $screen-sm) {
+		margin: 10px 0 0 0;
+	}
+}
+
 .page--main {
+	padding-bottom: 10rem;
 	padding-top: 10rem;
+	@media screen and (max-width: $screen-sm) {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
 }

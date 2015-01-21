@@ -3,41 +3,32 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<main class="page--main" role="main">
+<main class="page--main col-md-7 col-md-pull-4" role="main">
             
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
 
-    {{! Everything inside the #post tags pulls data from the post }}
-    {{#post}}
-
-        <article class="post">
-            <header class="post-header">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="post-meta">
-                            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-                        </div>
-                        <h1 class="post-title">{{{title}}}</h1>
-                    </div>
-                </div>
-            </header>
-
-            <section class="post-content content--text">
-                <div class="row">
-                    {{content}}
-                </div>
-                
-                <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1403226798.html#_=1404352611790&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=robertnealan&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true"></iframe>
-            </section>
-
-            <footer class="post-footer">
+            <article class="post">
+                <header class="post-header">
                     
-                        <p>&copy; 2013 – 2015 Robert Nealan. All rights reserved.
-                   
-                        <a href="#">Design</a>, <a href="#">Typography</a>, <a href="#">Designing in the Browser</a>
+                    <h1 class="post-title">{{{title}}}</h1>
+                    <div class="post-meta">
+                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
                     </div>
-            </footer>
-        </article>
+                </header>
 
-    {{/post}}
-        
+                <section class="post-content content--text">
+                    
+                    {{content}}
+                    
+                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1403226798.html#_=1404352611790&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=robertnealan&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true"></iframe>
+                </section>
+
+                <footer class="post--footer">
+                    <a href="#">Design</a>, <a href="#">Typography</a>, <a href="#">Designing in the Browser</a>
+                    <p class="post--footer--copyright">&copy; 2013 – 2015 Robert Nealan. All rights reserved.</p>
+                </footer>
+            </article>
+
+        {{/post}}
 </main>

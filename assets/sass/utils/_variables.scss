@@ -1,10 +1,12 @@
-$primary-color: #1a90ff; // 26, 144, 255
-
-$body-font-color: #333;
+$primary-color: #eb664b; // 26, 144, 255
+//235, 102, 75
+$primary-color-rgb: '235, 102, 75';
+$body-font-color: #444;
 $body-font-family: "freight-text-pro", Georgia, serif;
-$body-font-size: 1.7rem;
+$font-family-sans: "freight-sans-pro", Helvetica, Arial, sans-serif;
+$body-font-size: 1.8rem;
 $body-line-height: 1.75em;
-$body-font-weight: 300;
+$body-font-weight: 400;
 
 $link-color: $primary-color;
 $link-color-hover: darken($link-color, 10%); // 23, 130, 229
@@ -13,3 +15,7 @@ $title-font-color: #444;
 $title-font-family:	"abril-display", Georgia, serif;
 
 $default-border-color: #ddd;
+
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;

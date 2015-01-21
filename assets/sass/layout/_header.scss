@@ -1,17 +1,52 @@
-.page-cover {
-	background: transparent;
-	height:0;
-	position: fixed;
+.page--header {
+	background: #fafafa;
+	color: #999;
+	height: 100%;
+	padding-top: 10rem;
+	position: relative;
 	top: 0;
-	width: 100%;
-	z-index:21;
+
+	&::before {
+		background: #fafafa;
+		content: '';
+		display: block;
+		height: 10000px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 10000px;
+	}
+	.site--name {
+		color: #333;
+		font-weight: 700;
+	}
+	@media screen and (max-width: $screen-sm) {
+		border-bottom: 1px solid #ddd;
+		padding-bottom: 4rem;
+		padding-top: 4rem;
+		&::before {
+			display: none;
+		}
+	}
+}
+
+.page--header--content {
+	position: relative;
+	z-index: 2;
 }
 
 .page-nav {
+	//border-top: 1px solid #eee;
 	font-size: 1.5rem;
 	font-weight: $body-font-weight;
 	letter-spacing: 0.08em;
+	margin-top: 2rem;
+	padding-top: 4rem;
 	ul {
+		li {
+		}
+	}
+	/*ul {
 		@include horizontal-list(false);
 		
 		li {
@@ -48,13 +83,5 @@
 				}
 			}
 		}
-	}
-}
-
-
-.page--header {
-	padding-top: 5rem;
-	padding-bottom: 5rem;
-	position: relative;
-	z-index: 22;
+	}*/
 }

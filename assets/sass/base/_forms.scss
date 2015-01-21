@@ -16,11 +16,36 @@
 	margin-bottom: .2em;
 }
 
-input[type="text"] {
-	border: 1px solid #ccc;
-	padding: .15em .5em;
+input[type="text"],
+input[type="email"] {
+	background: rgba(#fff, .1);
+	border: 1px solid #fff;
+	color: #fff;
+	font-family: $font-family-sans;
+	font-weight: 300;
+	@include border-radius(30px);
+	height: 46px;
+	line-height: 46px;
+	padding: .5em 1em;
 }
+
 
 .t-center {
 	text-align: center;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(#ffffff, .75);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(#ffffff, .75);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(#ffffff, .75);  
+}
+
+:-ms-input-placeholder {  
+   color: rgba(#ffffff, .75);  
 }

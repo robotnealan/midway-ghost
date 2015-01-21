@@ -1,11 +1,17 @@
 .page--footer {
-	color: #666;
-	position: fixed;
-	bottom: 0;
-	left: 66.66%;
+	@include background(linear-gradient(top, $primary-color 0, adjust-hue($primary-color, 20%) 100%));
+	color: #fff;
+	padding: 8rem 0 4rem 0;
+	position: relative;
+	text-align: center;
+	z-index: 5;
 }
 
-.page--footer--inner {
-	padding: 0 40px;
-	position: relative;
+.page--footer--top {
+
+}
+
+.page--footer--bottom {
+	font-family: $font-family-sans;
+	font-size: 1.4rem;
 }

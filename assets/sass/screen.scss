@@ -18,11 +18,12 @@
 @import "layout/main";
 @import "layout/header";
 @import "layout/footer";
-@import "layout/posts";
+@import "layout/sidebar";
 
 @import "components/author";
 @import "components/tags";
 @import "components/excerpt";
+@import "components/posts";
 
 @import "vendor/mailchimp";
 @import "vendor/twitter";
@@ -30,41 +31,14 @@
 
 
 body {
+	background: $primary-color;
 	font-family: $body-font-family;
 	font-weight: $body-font-weight;
 	font-size: $body-font-size;
 	line-height: $body-line-height;
 }
 
-.page--sidebar {
-	background: #fafafa;
-	color: #666;
-	height: 100%;
-	position: fixed;
-	left: 66.66%;
-	padding-top: 10rem;
-	top: 0;
-	&::before {
-		background: #fafafa;
-		content: '';
-		display: block;
-	position: fixed;
-	height: 100%;
-	width: 33.33%;
-	top: 0;
-	left: 66.66%;
-	}
-}
 
-.page--sidebar--inner {
-	padding: 0 40px;
-	position: relative;
-	
-}
-
-.page--sidebar-background {
-	
-}
 .avatar {
 	@include border-radius(50%);
 	height: 120px;
