@@ -1,14 +1,10 @@
 .page--footer {
-	@include background(linear-gradient(top, $primary-color 0, adjust-hue($primary-color, 20%) 100%));
+	background: #eb664b;
 	color: #fff;
 	padding: 8rem 0 4rem 0;
 	position: relative;
 	text-align: center;
 	z-index: 5;
-}
-
-.page--footer--top {
-
 }
 
 .page--footer--bottom {

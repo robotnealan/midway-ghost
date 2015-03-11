@@ -1,13 +1,9 @@
 .page--wrapper {
 	background: #fff;
-	margin: 10px 10px 0 10px;
 	overflow: hidden;
 	position: relative;
 	&>.container {
 		position: relative;
-	}
-	@media screen and (max-width: $screen-sm) {
-		margin: 10px 0 0 0;
 	}
 }
 

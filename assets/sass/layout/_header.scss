@@ -1,21 +1,10 @@
 .page--header {
-	background: #fafafa;
 	color: #999;
 	height: 100%;
 	padding-top: 10rem;
 	position: relative;
 	top: 0;
 
-	&::before {
-		background: #fafafa;
-		content: '';
-		display: block;
-		height: 10000px;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 10000px;
-	}
 	.site--name {
 		color: #333;
 		font-weight: 700;

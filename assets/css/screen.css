@@ -1901,28 +1901,21 @@ input[type="email"] {
 /* line 1, ../sass/layout/_main.scss */
 .page--wrapper {
   background: #fff;
-  margin: 10px 10px 0 10px;
   overflow: hidden;
   position: relative;
 }
-/* line 6, ../sass/layout/_main.scss */
+/* line 5, ../sass/layout/_main.scss */
 .page--wrapper > .container {
   position: relative;
 }
-@media screen and (max-width: 768px) {
-  /* line 1, ../sass/layout/_main.scss */
-  .page--wrapper {
-    margin: 10px 0 0 0;
-  }
-}
 
-/* line 14, ../sass/layout/_main.scss */
+/* line 10, ../sass/layout/_main.scss */
 .page--main {
   padding-bottom: 10rem;
   padding-top: 10rem;
 }
 @media screen and (max-width: 768px) {
-  /* line 14, ../sass/layout/_main.scss */
+  /* line 10, ../sass/layout/_main.scss */
   .page--main {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1931,25 +1924,13 @@ input[type="email"] {
 
 /* line 1, ../sass/layout/_header.scss */
 .page--header {
-  background: #fafafa;
   color: #999;
   height: 100%;
   padding-top: 10rem;
   position: relative;
   top: 0;
 }
-/* line 9, ../sass/layout/_header.scss */
-.page--header::before {
-  background: #fafafa;
-  content: '';
-  display: block;
-  height: 10000px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 10000px;
-}
-/* line 19, ../sass/layout/_header.scss */
+/* line 8, ../sass/layout/_header.scss */
 .page--header .site--name {
   color: #333;
   font-weight: 700;
@@ -1963,19 +1944,19 @@ input[type="email"] {
   }
 }
 @media screen and (max-width: 992px) {
-  /* line 29, ../sass/layout/_header.scss */
+  /* line 18, ../sass/layout/_header.scss */
   .page--header::before {
     display: none;
   }
 }
 
-/* line 35, ../sass/layout/_header.scss */
+/* line 24, ../sass/layout/_header.scss */
 .page--header--content {
   position: relative;
   z-index: 2;
 }
 
-/* line 40, ../sass/layout/_header.scss */
+/* line 29, ../sass/layout/_header.scss */
 .page-nav {
   font-size: 1.5rem;
   font-weight: 400;
@@ -2024,11 +2005,7 @@ input[type="email"] {
 
 /* line 1, ../sass/layout/_footer.scss */
 .page--footer {
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ViNjY0YiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ViOWI0YiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eb664b), color-stop(100%, #eb9b4b));
-  background: -moz-linear-gradient(top, #eb664b 0%, #eb9b4b 100%);
-  background: -webkit-linear-gradient(top, #eb664b 0%, #eb9b4b 100%);
-  background: linear-gradient(to bottom, #eb664b 0%, #eb9b4b 100%);
+  background: #eb664b;
   color: #fff;
   padding: 8rem 0 4rem 0;
   position: relative;
@@ -2036,7 +2013,7 @@ input[type="email"] {
   z-index: 5;
 }
 
-/* line 14, ../sass/layout/_footer.scss */
+/* line 10, ../sass/layout/_footer.scss */
 .page--footer--bottom {
   font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
