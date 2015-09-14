@@ -6,6 +6,7 @@ a {
 	color: $link-color;
 	text-decoration: none;
 	@include transition(color .2s);
+	
 	&:hover {
 		@include background(linear-gradient(bottom, rgba($primary-color,0) 50%, rgba($primary-color,1) 50%));
 		background-repeat: repeat-x;
@@ -14,6 +15,7 @@ a {
 		color: $link-color-hover;
 		text-decoration: none;
 	}
+	
 	&:focus {
 		color: $link-color-hover;
 		text-decoration: none;
