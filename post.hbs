@@ -25,7 +25,9 @@
                 </section>
 
                 <footer class="post--footer">
-                    <div class="post--tags">{{tags}}</div>
+                    {{#if tags}}
+                        <div class="post--tags">{{tags}}</div>
+                    {{/if}}
                     <p class="post--footer--copyright">&copy; 2013 – 2015 Robert Nealan. All rights reserved.</p>
                 </footer>
             </article>

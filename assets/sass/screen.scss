@@ -20,8 +20,6 @@
 @import "layout/footer";
 @import "layout/sidebar";
 
-@import "components/author";
-@import "components/tags";
 @import "components/excerpt";
 @import "components/posts";
 
@@ -50,6 +48,7 @@ body {
 		width: 100%;
 	}
 }
+
 .hearts {
 	color: #f00;
 }

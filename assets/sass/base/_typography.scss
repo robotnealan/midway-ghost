@@ -35,3 +35,13 @@ strong {
 	@extend .content--text;
 	font-size: ($body-font-size * .9);
 }
+
+.loop-title {
+  margin-bottom: 2em;
+  color: #666;
+  font-family: "abril-display", Georgia, serif;
+  font-weight: 300;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
