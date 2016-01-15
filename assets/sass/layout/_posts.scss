@@ -117,7 +117,17 @@
 			margin: 0;
 			width: auto;
 		}
-	}	
+	}
+
+	ol {
+		list-style-type: numbered;
+		margin: 2em 0;
+		padding-left: 4rem;
+		
+		li {
+			margin-bottom: 0.5em;
+		}
+	}
 
 	h4 + ul {
 		margin-top: .25em;
