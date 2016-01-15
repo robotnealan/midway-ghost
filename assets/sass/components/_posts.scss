@@ -6,6 +6,7 @@
 
 .post-meta {
 	color: #aaa;
+	font-size:.85em;
 	font-style: italic;
 	margin-bottom: .5em;
 }
@@ -15,6 +16,7 @@
 	font-family: $title-font-family;
 	font-size: 4rem;
 	margin-bottom: .25em;
+	letter-spacing: 0.02em;
 	line-height:1em;
 	a {
 		color: $title-font-color;
@@ -27,6 +29,18 @@
 	}
 }
 
+.post-header {
+	margin-bottom: 2rem;
+}
+
+.post__image {
+	margin-top: 2rem;
+
+	img {
+		max-width: 100%;
+	}
+}
+
 .post-subtitle {
 	color: $title-font-color;
 	font-size: 2rem;
@@ -35,33 +49,7 @@
 	font-weight: 400
 }
 
-.post-header {
-}
-
-.post-excerpt {
-	color: $body-font-color;
-	font-weight: $body-font-weight;
-	font-size: $body-font-size;
-	line-height: $body-line-height;
-}
-
 .post-content {
-	a {
-		color: $primary-color;
-		@include background(linear-gradient(bottom, rgba(26, 144, 255, 0) 50%, rgba(26, 144, 255, 1) 50%));
-		background-repeat: repeat-x;
-		background-size: 2px 2px;
-		background-position: 0 1.3em;
-		@include transition(background .25s, color .25s);
-		&:hover {
-			@include background(linear-gradient(bottom, rgba(23, 130, 229, 0) 50%, rgba(23, 130, 229, 1) 50%));
-			background-repeat: repeat-x;
-			background-size: 2px 2px;
-			background-position: 0 1.3em;
-			color: $link-color-hover;
-		}
-	}
-
 	img {
 		max-width: 100%;
 	}
@@ -117,7 +105,7 @@
 			margin: 0;
 			width: auto;
 		}
-	}
+	}	
 
 	ol {
 		list-style-type: decimal;
@@ -137,6 +125,12 @@
 		margin-top: 0;
 	}
 	
+	p {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
 	blockquote {
 		font-style: italic;
 		margin-top: 1em;
@@ -170,32 +164,17 @@
 	}
 }
 
-.post-footer {
+.post--footer {
 	margin-bottom: 4rem;
 	position: relative;
 	h5 {
 		font-weight: 700;
 	}
-	a {
-		color: $link-color;
-		@include background(linear-gradient(bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 50%));
-		background-repeat: repeat-x;
-		background-size: 2px 2px;
-		background-position: 0 1.2em;
-		@include transition(background .1s, color .1s);
-		&:hover {
-			@include background(linear-gradient(bottom, rgba(26,144,255,0) 50%, rgba(26,144,255,1) 50%));
-			background-repeat: repeat-x;
-			background-size: 2px 2px;
-			background-position: 0 1.2em;
-			color: $link-color-hover;
-		}
-	}
 	
 }
 
-.post-footer-bottom {
-	p {
-		margin-bottom: 0.5em;
-	}
+.post--footer--copyright {
+	color: #999;
+	font-size: .85em;
+	font-style: italic;
 }
