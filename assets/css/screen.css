@@ -3,7 +3,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,45 +25,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -1816,7 +1816,7 @@ strong {
 .pagination {
   *zoom: 1;
 }
-/* line 38, ../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../usr/local/rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .pagination:after {
   content: "";
   display: table;
@@ -2119,31 +2119,41 @@ input[type="email"] {
   width: auto;
 }
 /* line 110, ../sass/components/_posts.scss */
+.post-content ol {
+  list-style-type: decimal;
+  margin: 2em 0;
+  padding-left: 4rem;
+}
+/* line 115, ../sass/components/_posts.scss */
+.post-content ol li {
+  margin-bottom: 0.5em;
+}
+/* line 120, ../sass/components/_posts.scss */
 .post-content h4 + ul {
   margin-top: .25em;
 }
-/* line 114, ../sass/components/_posts.scss */
+/* line 124, ../sass/components/_posts.scss */
 .post-content ul + h4 {
   margin-top: 0;
 }
-/* line 119, ../sass/components/_posts.scss */
+/* line 129, ../sass/components/_posts.scss */
 .post-content p:first-child {
   margin-top: 0;
 }
-/* line 124, ../sass/components/_posts.scss */
+/* line 134, ../sass/components/_posts.scss */
 .post-content blockquote {
   font-style: italic;
   margin-top: 1em;
   padding-left: 15px;
   position: relative;
 }
-/* line 130, ../sass/components/_posts.scss */
+/* line 140, ../sass/components/_posts.scss */
 .post-content blockquote p {
   float: none;
   margin: 0 0 0 15px;
   width: auto;
 }
-/* line 137, ../sass/components/_posts.scss */
+/* line 147, ../sass/components/_posts.scss */
 .post-content blockquote::before {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzYTE5MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ViNjY0YiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #f3a190), color-stop(100%, #eb664b));
@@ -2157,7 +2167,7 @@ input[type="email"] {
   position: absolute;
   width: 3px;
 }
-/* line 148, ../sass/components/_posts.scss */
+/* line 158, ../sass/components/_posts.scss */
 .post-content pre {
   background: #fafaed;
   border: 1px solid #ddd;
@@ -2166,17 +2176,17 @@ input[type="email"] {
   padding: 20px;
 }
 
-/* line 157, ../sass/components/_posts.scss */
+/* line 167, ../sass/components/_posts.scss */
 .post--footer {
   margin-bottom: 4rem;
   position: relative;
 }
-/* line 160, ../sass/components/_posts.scss */
+/* line 170, ../sass/components/_posts.scss */
 .post--footer h5 {
   font-weight: 700;
 }
 
-/* line 166, ../sass/components/_posts.scss */
+/* line 176, ../sass/components/_posts.scss */
 .post--footer--copyright {
   color: #999;
   font-size: .85em;
