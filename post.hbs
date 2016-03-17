@@ -5,34 +5,34 @@
 
 <main class="page--main col-md-7 col-md-pull-4" role="main">
             
-        {{! Everything inside the #post tags pulls data from the post }}
-        {{#post}}
+    {{! Everything inside the #post tags pulls data from the post }}
+    {{#post}}
 
-            <article class="post">
-                <header class="post-header">
-                    <h1 class="post-title">{{{title}}}</h1>
+        <article class="post" itemscope itemtype="http://schema.org/Article">
+            <header class="post-header">
+                <h1 class="post-title" itemprop="name">{{{title}}}</h1>
 
-                    <div class="post-meta">
-                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>{{#if updated_at}}, {{date updated_at 'DD MMM YYYY'}}{{/if}}
-                    </div>
+                <div class="post-meta">
+                    <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='DD MMM YYYY'}}</time>{{#if updated_at}}, <time itemprop="dateModified">{{date updated_at 'DD MMM YYYY'}}</time>{{/if}}
+                </div>
 
-                    {{#if image}}
-                        <div class="post__image"><img src="{{image}}" /></div>
-                    {{/if}}
-                </header>
+                {{#if image}}
+                    <div class="post__image"><img src="{{image}}" itemprop="image" /></div>
+                {{/if}}
+            </header>
 
-                <section class="post-content content--text">
-                    {{content}}
-                </section>
+            <section class="post-content content--text" itemprop="articleBody">
+                {{content}}
+            </section>
 
-                <footer class="post--footer">
-                    {{#if tags}}
-                        <div class="post--tags">{{tags}}</div>
-                    {{/if}}
-                    <p class="post--footer--copyright">&copy; 2013 – 2016 Robert Nealan. All rights reserved.</p>
-                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1403226798.html#_=1404352611790&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=robertnealan&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true"></iframe>
-                </footer>
-            </article>
+            <footer class="post--footer">
+                {{#if tags}}
+                    <div class="post--tags" itemprop="keywords">{{tags}}</div>
+                {{/if}}
+                <p class="post--footer--copyright">&copy; <span itemprop="copyrightYear">2013 – 2016</span> <span itemprop="copyrightHolder author">Robert Nealan</span>. All rights reserved.</p>
+                <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1403226798.html#_=1404352611790&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=robertnealan&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true"></iframe>
+            </footer>
+        </article>
 
-        {{/post}}
+    {{/post}}
 </main>
