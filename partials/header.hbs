@@ -1,9 +1,11 @@
 <header class="page--header col-md-4 col-md-push-8">
 	<div class="page--header--content">
-	<div class="avatar">
-		<img src="{{asset "img/profile-1.jpg"}}" alt="Robert Nealan" />
-	</div>
-	<p class="content--text--small"><span class="site--name">Robert Nealan</span> is a San Francisco based <span itemprop="title">designer + developer</span>, the founder of <span itemprop="affiliation"><a href="http://atomidesign.com">Atomi Design</a></span> &amp; <span itemprop="affiliation"><a href="http://dwc.io">Designers Who Code</a></span>.
-	{{> nav}}
+		<div itemscope itemprop="founder" itemtype="http://schema.org/Person">
+			<div class="avatar">
+				<img src="{{asset "img/profile-1.jpg"}}" alt="Robert Nealan" itemprop="image" />
+			</div>
+			<p class="content--text--small"><span class="site--name" itemprop="name">Robert Nealan</span> is a <span itemprop="workLocation">San Francisco</span> based <span itemprop="jobTitle">designer + developer</span>, the founder of <span itemprop="affiliation"><a href="http://atomidesign.com">Atomi Design</a></span> &amp; <span itemprop="affiliation"><a href="http://dwc.io">Designers Who Code</a></span>.
+		</div>
+		{{> nav}}
 	</div>
 </header>
