@@ -162,6 +162,18 @@
 		line-height: 1.5em;
 		padding: 20px;
 	}
+
+	code {
+		padding: 0.2rem 0.3rem 0.1rem;
+		border: 1px solid #d8e0e4;
+		background: #f5f7f8;
+		border-radius: 2px;
+		color: #eb664b;
+		vertical-align: middle;
+		white-space: pre-wrap;
+		font-size: 0.8em;
+		line-height: 1em;
+	}
 }
 
 .post--footer {
