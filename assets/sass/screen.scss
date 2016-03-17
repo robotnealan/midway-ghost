@@ -39,11 +39,11 @@ body {
 
 .avatar {
 	@include border-radius(50%);
-	height: 120px;
-	margin: 0 auto 1em auto;
+	height: 130px;
+	margin: 0 0 2rem 0;
 	overflow: hidden;
 	position: relative;
-	width: 120px;
+	width: 130px;
 	img {
 		width: 100%;
 	}
