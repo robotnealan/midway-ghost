@@ -170,7 +170,12 @@
 	}
 
 	figure {
+		margin: 1em 0;
 		position: relative;
+	}
+
+	figcaption {
+		margin-top: 1rem;
 	}
 
 	.figure__pull {
@@ -178,9 +183,19 @@
 		line-height: 1.5;
 		font-style: italic;
 	}
+
+	.figure__title {
+		display: block;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
 }
 
 @media screen and (min-width: $screen-md) {
+	figcaption {
+		margin-top: 0;
+	}
+
 	.post-content {
 		.figure__pull {
 			position: absolute;
