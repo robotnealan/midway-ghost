@@ -13,7 +13,7 @@
                 <h1 class="post-title">{{{title}}}</h1>
 
                 <div class="post-meta">
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>{{#if updated_at}}, {{date updated_at 'DD MMM YYYY'}}{{/if}}
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>{{#if updated_at}}, Updated: {{date updated_at format='DD MMM YYYY'}}{{/if}}
                 </div>
 
                 {{#if image}}
