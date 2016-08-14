@@ -37,6 +37,7 @@ body {
 
 .avatar {
 	@include border-radius(50%);
+	display: block;
 	height: 130px;
 	margin: 0 0 2rem 0;
 	overflow: hidden;
