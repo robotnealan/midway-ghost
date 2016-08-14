@@ -26,16 +26,14 @@
 @import "vendor/mailchimp";
 @import "vendor/twitter";
 
-
-
 body {
 	background: $primary-color;
 	font-family: $body-font-family;
 	font-weight: $body-font-weight;
 	font-size: $body-font-size;
 	line-height: $body-line-height;
+	border-top: 3px solid $primary-color;
 }
-
 
 .avatar {
 	@include border-radius(50%);
