@@ -41,9 +41,17 @@ body {
 	margin: 0 0 2rem 0;
 	overflow: hidden;
 	position: relative;
+	@include transition(box-shadow 0.25s ease-in-out);
 	width: 130px;
+
 	img {
 		width: 100%;
+	}
+
+	&:hover {
+		img {
+			box-shadow: 0 0 0 5px $primary-color;
+		}
 	}
 }
 
