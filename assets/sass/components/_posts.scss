@@ -192,11 +192,11 @@
 }
 
 @media screen and (min-width: $screen-md) {
-	figcaption {
-		margin-top: 0;
-	}
-
 	.post-content {
+		figcaption {
+			margin-top: 0;
+		}
+
 		.figure__pull {
 			position: absolute;
 			right: -32rem;
