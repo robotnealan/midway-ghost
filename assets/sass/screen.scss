@@ -47,7 +47,7 @@ body {
 	width: 130px;
 
 	img {
-		cursor: pointer;
+		@include user-select(none);
 		width: 100%;
 	}
 
