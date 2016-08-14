@@ -50,9 +50,7 @@ body {
 	}
 
 	&:hover {
-		img {
-			box-shadow: 0 0 0 5px $primary-color;
-		}
+		box-shadow: 0 0 0 5px $primary-color;
 	}
 }
 
