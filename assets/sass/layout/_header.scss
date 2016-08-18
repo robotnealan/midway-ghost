@@ -37,3 +37,24 @@
 		}
 	}
 }
+
+.avatar {
+	@include border-radius(50%);
+	cursor: pointer;
+	display: block;
+	height: 130px;
+	margin: 0 0 2rem 0;
+	overflow: hidden;
+	position: relative;
+	@include transition(box-shadow 0.25s ease-in-out);
+	width: 130px;
+
+	img {
+		@include user-select(none);
+		width: 100%;
+	}
+
+	&:hover {
+		box-shadow: 0 0 0 5px $primary-color;
+	}
+}

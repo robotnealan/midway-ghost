@@ -126,7 +126,7 @@
 
 	blockquote {
 		font-style: italic;
-		margin-top: 1em;
+		margin: 1.5em 0;
 		padding-left: 15px;
 		position: relative;
 
@@ -142,9 +142,9 @@
 			content: '';
 			display: block;
 			height: 100%;
-			left: 15px;
+			left: 0;
 			position: absolute;
-			width: 3px;
+			width: 5px;
 		}
 	}
 
