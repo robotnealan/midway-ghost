@@ -16,8 +16,8 @@
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>{{#if updated_at}}, Updated: {{date updated_at format='DD MMM YYYY'}}{{/if}}
                 </div>
 
-                {{#if image}}
-                    <div class="post__image"><img src="{{image}}" /></div>
+                {{#if feature_image}}
+                    <div class="post__image"><img src="{{img_url feature_image}}" /></div>
                 {{/if}}
             </header>
 

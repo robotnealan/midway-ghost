@@ -1,4 +1,8 @@
 {
   "name": "Midway",
-  "version": "0.0.10"
+  "version": "0.0.10",
+  "author": {
+    "email": "robertnealan@gmail.com",
+    "name": "Robert Nealan"
+  }
 }
