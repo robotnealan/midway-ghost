@@ -1,0 +1,27 @@
+app = "robertnealan-ghost"
+primary_region = "sjc"
+
+[build]
+  image = "ghost:5.87.2-alpine"
+
+[env]
+  NODE_ENV = "development"
+  url = "https://robertnealan.com"
+  database__client = "sqlite3"
+  database__connection__filename = "/var/lib/ghost/content/data/ghost-dev.db"
+
+[mounts]
+  source = "ghost_data"
+  destination = "/var/lib/ghost/content"
+
+[http_service]
+  internal_port = 2368
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
