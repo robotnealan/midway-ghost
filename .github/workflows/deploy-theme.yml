@@ -1,0 +1,40 @@
+name: Deploy Ghost Theme
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Zip theme
+        run: zip -r midway.zip assets partials *.hbs package.json
+
+      - name: Upload to Ghost
+        env:
+          GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
+        run: |
+          API_ID="${GHOST_ADMIN_API_KEY%%:*}"
+          API_SECRET="${GHOST_ADMIN_API_KEY##*:}"
+
+          header=$(echo -n '{"alg":"HS256","typ":"JWT","kid":"'"$API_ID"'"}' | base64 | tr -d '=' | tr '/+' '_-' | tr -d '\n')
+          now=$(date +%s)
+          payload=$(echo -n '{"iat":'"$now"',"exp":'"$((now + 300))"',"aud":"/admin/"}' | base64 | tr -d '=' | tr '/+' '_-' | tr -d '\n')
+          signature=$(echo -n "${header}.${payload}" | openssl dgst -sha256 -hmac "$(echo -n "$API_SECRET" | xxd -r -p)" -binary | base64 | tr -d '=' | tr '/+' '_-' | tr -d '\n')
+          TOKEN="${header}.${payload}.${signature}"
+
+          HTTP_CODE=$(curl -s -o response.json -w "%{http_code}" \
+            -X POST "https://robertnealan.com/ghost/api/admin/themes/upload/" \
+            -H "Authorization: Ghost ${TOKEN}" \
+            -F "file=@midway.zip;filename=midway.zip")
+
+          if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "201" ]; then
+            echo "Theme deployed successfully."
+          else
+            echo "Deploy failed (HTTP ${HTTP_CODE}):"
+            cat response.json
+            exit 1
+          fi

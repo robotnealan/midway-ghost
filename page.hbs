@@ -9,9 +9,11 @@
         {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
             <article class="post">
+                {{#if @page.show_title_and_feature_image}}
                 <header class="post-header">
                     <h1 class="post-title">{{{title}}}</h1>
                 </header>
+                {{/if}}
 
                 <section class="post-content">
                     {{content}}

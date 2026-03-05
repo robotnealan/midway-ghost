@@ -1,6 +1,8 @@
 {
   "name": "midway",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "keywords": ["ghost-theme"],
+  "card_assets": true,
   "author": {
     "email": "robertnealan@gmail.com",
     "name": "Robert Nealan"
